@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Weather Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🌦 Weather Analytics Dashboard</h1>
+
+        <div class="controls">
+
+            <input
+            type="text"
+            id="city"
+            placeholder="Enter City">
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+            <button onclick="getCurrentLocationWeather()">
+                📍 My Location
+            </button>
+
+            <button onclick="toggleTheme()">
+                🌙 Toggle Theme
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="history"></div>
+
+    <div id="loading" style="display:none;">
+        <h2>⏳ Loading Weather Data...</h2>
+    </div>
+
+    <button
+    id="downloadBtn"
+    onclick="downloadReport()"
+    style="display:none;">
+        📄 Download Report
+    </button>
+
+    <div id="weather"></div>
+
+    <br>
+
+    <canvas id="tempChart"></canvas>
+
+    <br><br>
+
+    <canvas id="humidityChart"></canvas>
+
+    <br><br>
+
+    <canvas id="rainChart"></canvas>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
